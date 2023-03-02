@@ -3,9 +3,9 @@ class Users
         File.open(user_file, "r").each_line do |user| 
             user.strip!
             if user.end_with?('*')  
-                puts `useradd -m -G sudo #{user.chop}`
+                puts `useradd -m -s /bin/bash -G sudo #{user.chop}`
             else
-                puts `useradd -m #{user}`
+                puts `useradd -m -s /bin/bash #{user}`
             end
         end
     end
