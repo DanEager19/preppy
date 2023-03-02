@@ -1,11 +1,5 @@
-class SysPrep
-    def intialize 
-        
-    end
-
-    def users
-        user_file = "users.txt"
-
+class Users
+    def users(user_file)
         File.open(user_file, "r").each_line do |user| 
             user.strip!
             if user.end_with?('*')  
@@ -16,24 +10,12 @@ class SysPrep
         end
     end
 
-    def passwords
+    def passwords(passwd)
         File.open("/etc/passwd", "r").each_line do |line| 
             user.strip!
             if user =~ /\/bin\/\.\*sh/
-                puts `echo #{user}:Password1! | chpasswd`
+                puts `echo #{user}:#{passwd} | chpasswd`
             end
         end
-    end
-
-    def firewall
-
-    end
-
-    def containers
-
-    end
-
-    def ssh
-
     end
 end
