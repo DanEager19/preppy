@@ -1,5 +1,9 @@
 class Dependencies
-    class install
-        puts `apt-get install -y wget curl build-essential`
+    def network_tools
+        puts `apt-get install -y wget curl net-tools`
+    end
+
+    def build
+        puts `apt-get install -y build-essential clang clang-tools`
     end
 end

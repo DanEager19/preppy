@@ -1,21 +1,21 @@
 class Services
-    def ssh
+    def ssh(flags)
 
     end
     
-    def ftp
+    def ftp(flags)
     
     end
     
-    def http
+    def http(flags)
     
     end
 
-    def samba
+    def samba(flags)
 
     end
 
-    def sql
+    def sql(flags)
     
     end
 end

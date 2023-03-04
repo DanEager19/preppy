@@ -1,0 +1,6 @@
+name: example-1
+network:
+  ip-address: 10.0.0.1
+dependencies:
+  - build
+  - network-tools
